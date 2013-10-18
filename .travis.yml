@@ -1,0 +1,15 @@
+language: c
+
+before_script:
+  - apt-get source -q varnish
+  - cd varnish*
+  - ./configure
+  - make
+  - cd ..
+  - ./autogen.sh
+  - cd varnish*; varnishdir="$PWD"; cd ..; ./configure --with-varnish="$varnishdir" VMODDIR=`pwd`
+  - make
+
+script:
+  - make check
+

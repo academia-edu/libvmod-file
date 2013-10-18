@@ -1,0 +1,8 @@
+Module file
+Init vmod_file_init
+
+Function VOID open(PRIV_VCL, STRING, STRING)
+Function VOID close(PRIV_VCL, STRING)
+
+Function VOID write(PRIV_VCL, STRING, STRING)
+Function VOID printf(PRIV_VCL, STRING, STRING_LIST)
