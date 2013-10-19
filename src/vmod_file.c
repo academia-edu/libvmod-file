@@ -22,7 +22,7 @@
 #ifndef NDEBUG
 #define dbgprintf(sp, ...) VSL(SLT_VCL_trace, ((sp) == NULL ? 0 : ((struct sess *) (sp))->id), __VA_ARGS__)
 #else
-#define dbgprintf(...) ((void) 0)
+#define dbgprintf(sp, ...) ((void) sizeof(sp))
 #endif
 
 typedef struct {
